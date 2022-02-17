@@ -1,10 +1,10 @@
-import * as index from './index';
+import request from 'supertest';
+import app from './index';
 
 describe('index', () => {
-    it('says hello', () => {
-        console.log = jest.fn();
-        index.main();
-        expect(console.log).toHaveBeenCalledTimes(1);
-        expect(console.log).toHaveBeenCalledWith("Hello, World!");
+    it('says hello', async () => {
+        const res = await request(app).get('/');
+        expect(res.statusCode).toBe(200);
+        expect(res.text).toBe("Hello, World!");
     });
 });
