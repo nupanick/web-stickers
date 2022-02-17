@@ -1,0 +1,1 @@
+A sample repo containing my preferred setup for Jest, Babel, and TypeScript.
