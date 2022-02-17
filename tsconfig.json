@@ -1,7 +1,9 @@
 {
     "include": ["source"],
+    "exclude": ["**/*.test.ts"],
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
-        "composite": true,
+        "declaration": true,
+        "outDir": "build"
     }
 }
